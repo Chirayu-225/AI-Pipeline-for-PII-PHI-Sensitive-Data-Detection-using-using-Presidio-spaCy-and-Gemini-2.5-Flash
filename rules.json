@@ -1,0 +1,146 @@
+[
+  {
+    "id": "hipaa-1",
+    "framework": "HIPAA",
+    "rule": "Names of patients or relatives",
+    "entity_types": ["PERSON", "patient_name"],
+    "description": "Names are one of the 18 HIPAA identifiers. Any name linked to health information constitutes PHI.",
+    "risk": "High"
+  },
+  {
+    "id": "hipaa-2",
+    "framework": "HIPAA",
+    "rule": "Geographic data smaller than state",
+    "entity_types": ["LOCATION", "STREET_ADDRESS", "ZIP_CODE"],
+    "description": "Street addresses, cities, zip codes, and geocodes smaller than state level are PHI under HIPAA.",
+    "risk": "High"
+  },
+  {
+    "id": "hipaa-3",
+    "framework": "HIPAA",
+    "rule": "Dates (except year) for individuals",
+    "entity_types": ["DATE_TIME", "date_of_birth"],
+    "description": "All dates (birth, admission, discharge, death) except year are HIPAA identifiers.",
+    "risk": "Medium"
+  },
+  {
+    "id": "hipaa-4",
+    "framework": "HIPAA",
+    "rule": "Phone and fax numbers",
+    "entity_types": ["PHONE_NUMBER", "PHONE_NUMBER_IN"],
+    "description": "Telephone and fax numbers are one of the 18 HIPAA safe harbor identifiers.",
+    "risk": "High"
+  },
+  {
+    "id": "hipaa-5",
+    "framework": "HIPAA",
+    "rule": "Email addresses",
+    "entity_types": ["EMAIL_ADDRESS"],
+    "description": "Email addresses are HIPAA identifiers when associated with health data.",
+    "risk": "High"
+  },
+  {
+    "id": "hipaa-6",
+    "framework": "HIPAA",
+    "rule": "Social Security Numbers",
+    "entity_types": ["US_SSN"],
+    "description": "SSNs are explicitly listed as HIPAA identifiers and among the highest-risk PII.",
+    "risk": "High"
+  },
+  {
+    "id": "hipaa-7",
+    "framework": "HIPAA",
+    "rule": "Medical record numbers",
+    "entity_types": ["medical_record_number", "MRN"],
+    "description": "MRNs directly identify a patient record and are HIPAA PHI.",
+    "risk": "High"
+  },
+  {
+    "id": "hipaa-8",
+    "framework": "HIPAA",
+    "rule": "Health plan beneficiary numbers",
+    "entity_types": ["insurance_id"],
+    "description": "Insurance member IDs and beneficiary numbers are HIPAA identifiers.",
+    "risk": "High"
+  },
+  {
+    "id": "hipaa-9",
+    "framework": "HIPAA",
+    "rule": "Diagnosis and treatment information",
+    "entity_types": ["diagnosis", "prescription", "treatment"],
+    "description": "Clinical information including diagnoses, prescriptions, and treatments is core PHI.",
+    "risk": "High"
+  },
+  {
+    "id": "gdpr-1",
+    "framework": "GDPR",
+    "rule": "Personal data — identification",
+    "entity_types": ["PERSON", "EMAIL_ADDRESS", "PHONE_NUMBER", "PHONE_NUMBER_IN", "LOCATION", "STREET_ADDRESS", "ZIP_CODE"],
+    "description": "GDPR Article 4 defines personal data as any info relating to an identified or identifiable natural person.",
+    "risk": "High"
+  },
+  {
+    "id": "gdpr-2",
+    "framework": "GDPR",
+    "rule": "Special category data — health",
+    "entity_types": ["diagnosis", "prescription", "medical_record_number"],
+    "description": "Health data is a special category under GDPR Article 9 requiring explicit consent.",
+    "risk": "High"
+  },
+  {
+    "id": "gdpr-3",
+    "framework": "GDPR",
+    "rule": "National identification numbers",
+    "entity_types": ["US_SSN", "AADHAAR", "PAN", "national_id"],
+    "description": "National ID numbers are personal data under GDPR and require appropriate safeguards.",
+    "risk": "High"
+  },
+  {
+    "id": "pci-1",
+    "framework": "PCI-DSS",
+    "rule": "Primary Account Number (PAN)",
+    "entity_types": ["CREDIT_CARD"],
+    "description": "PCI-DSS Requirement 3: Protect stored cardholder data. PAN must be rendered unreadable.",
+    "risk": "High"
+  },
+  {
+    "id": "pci-2",
+    "framework": "PCI-DSS",
+    "rule": "Card security codes",
+    "entity_types": ["CVV"],
+    "description": "CVV/CVC must never be stored after authorisation — PCI-DSS Requirement 3.2.",
+    "risk": "High"
+  },
+  {
+    "id": "pci-3",
+    "framework": "PCI-DSS",
+    "rule": "Bank account and routing numbers",
+    "entity_types": ["US_BANK_NUMBER", "ROUTING_NUMBER", "IBAN_CODE"],
+    "description": "Financial account numbers are in-scope cardholder data under PCI-DSS.",
+    "risk": "High"
+  },
+  {
+    "id": "ccpa-1",
+    "framework": "CCPA",
+    "rule": "Personal information — identifiers",
+    "entity_types": ["PERSON", "EMAIL_ADDRESS", "PHONE_NUMBER", "PHONE_NUMBER_IN", "IP_ADDRESS", "US_SSN"],
+    "description": "CCPA Section 1798.140 defines personal information broadly to include online identifiers and real names.",
+    "risk": "Medium"
+  },
+  {
+    "id": "ccpa-2",
+    "framework": "CCPA",
+    "rule": "Sensitive personal information",
+    "entity_types": ["US_SSN", "CREDIT_CARD", "IBAN_CODE", "diagnosis"],
+    "description": "CCPA 2023 amendment defines sensitive PI including SSN, financial account info, and health data.",
+    "risk": "High"
+  },
+  {
+    "id": "glba-1",
+    "framework": "GLBA",
+    "rule": "Nonpublic personal financial information",
+    "entity_types": ["CREDIT_CARD", "US_BANK_NUMBER", "IBAN_CODE", "ROUTING_NUMBER", "salary"],
+    "description": "GLBA Safeguards Rule requires financial institutions to protect NPI including account numbers and financial history.",
+    "risk": "High"
+  }
+]
