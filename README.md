@@ -1,8 +1,7 @@
-# 🛡️ SentinelScan
 
-# 🛡️ SentinelScan
+# 🛡️ AI Pipeline for PII,PHI and Sensitive Data Detection
 
-A local-first sensitive data detection and redaction pipeline.
+A sensitive data detection and redaction pipeline.
 Detects PII, PHI, and financial data in text, PDFs, and images, then explains
 the risk in plain English and redacts it.
 
