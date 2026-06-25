@@ -205,16 +205,6 @@ regulations a document touches.
 
 ---
 
-## Going fully local
-
-To swap the Gemini reasoner back out for a local LLM (e.g. Ollama + Phi-3
-Mini), `reasoner.py` exposes the same `LocalReasoner.explain()` /
-`.explain_finding()` interface that `pipeline.py` calls — no changes needed
-outside that one file. Swap the implementation, keep the method signatures,
-done.
-
----
-
 ## Roadmap / Known Limitations
 
 - Single-document scanning only — no batch processing yet
@@ -228,6 +218,3 @@ done.
 
 ---
 
-## License
-
-MIT
