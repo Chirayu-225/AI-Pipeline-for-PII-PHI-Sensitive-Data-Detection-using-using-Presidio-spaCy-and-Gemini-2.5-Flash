@@ -1,5 +1,5 @@
 
-# 🛡️ AI Pipeline for PII,PHI and Sensitive Data Detection
+# 🛡️ AI Pipeline for PII, PHI and Sensitive Data Detection
 
 A sensitive data detection and redaction pipeline.
 Detects PII, PHI, and financial data in text, PDFs, and images, then explains
